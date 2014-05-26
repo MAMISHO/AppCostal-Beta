@@ -18,7 +18,8 @@
     </head>
     <body>
         <div id="page">
-            <div id="header"><h1 style="font-size: 40px;text-align: center;">Editar Hermandad</h1></div>
+            <div id="header"><div class="usuario"><bean:write name="usuario" property="nombre"  /></div>
+                <h1 style="font-size: 40px;text-align: center;">Editar Hermandad</h1></div>
             <div id="content">
                 
             </div>

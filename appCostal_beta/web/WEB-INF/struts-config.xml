@@ -42,6 +42,7 @@
         <action input="/login.do" name="CheckLoginActionForm" path="/checkLogin" scope="session" type="com.appcostal.struts.CheckLoginAction">
             <forward name="success" path="/Welcome.do"/>
             <forward name="failure" path="/login.do"/>
+            <forward name="usuario" path="/panelUsuario.do"/>
         </action>
         <action path="/hermano" type="com.appcostal.struts.HermanoAction">
             <forward name="success" path="/hermano.jsp"/>
@@ -105,6 +106,9 @@
         </action>
         <action input="/recorrido" name="SeleccionRecorridoActionForm" path="/seleccionRecorrido" scope="request" type="com.appcostal.struts.SeleccionRecorridoAction">
             <forward name="success" path="/editarRecorrido.jsp"/>
+        </action>
+        <action path="/panelUsuario" type="com.appcostal.struts.PanelUsuarioAction">
+            <forward name="success" path="/panel-usuario.jsp"/>
         </action>
         <!--<action input="/seleccionIguala" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.CheckIgualaAction"/>-->
          <!--<action path="/recorridoAction" type="com.appcostal.struts.RecorridoAction"/>

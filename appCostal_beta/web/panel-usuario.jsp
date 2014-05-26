@@ -16,6 +16,18 @@
         <html:base/>
     </head>
     <body>
-        <h1>Aqui vamos a cargar las hermandades de queda usuario que enter con los privilegios de capataz o costalero</h1>
+        
+        <div id="page">
+            <div id="header"><div class="usuario"><bean:write name="usuario" property="nombre"  /></div>
+                <h1 style="font-size: 40px;text-align: center;">Hermandades registradas</h1>
+            </div>
+            <div id="content">
+
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        
     </body>
 </html:html>

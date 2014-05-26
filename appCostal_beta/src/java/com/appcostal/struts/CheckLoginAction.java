@@ -24,7 +24,7 @@ public class CheckLoginAction extends org.apache.struts.action.Action {
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
     private static final String FAILURE = "failure";
-
+    private static final String USUARIO = "usuario";
     /**
      * This is the action called from the Struts framework.
      *
@@ -56,7 +56,13 @@ public class CheckLoginAction extends org.apache.struts.action.Action {
         
         if (hermano != null) {
             if (email.equals(hermano.getEmail())) {
-                return mapping.findForward(SUCCESS);
+                request.getSession().setAttribute("usuario", hermano);
+                if(hermano.getTipo().equals("administrador")){
+                    return mapping.findForward(SUCCESS);
+                }else{
+                    return mapping.findForward(USUARIO);
+                }
+                
             } else {
                 //errores.add("email", new ActionMessage("checkLogin.error.clave"));
                 ((CheckLoginActionForm) form).validate(mapping, request).add("clave", new ActionMessage("checkLogin.error.clave"));
