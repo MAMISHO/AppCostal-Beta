@@ -14,40 +14,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>G-Hermano</title>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="http://localhost:8080/appCostal/assets/css/font-awesome.css"/>-->
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            function editar(){
-                $("#btn-editar").click(function(){
-                /*$(".tr-form").attr('onclick','').unbind('click');
-                $(".caja-botones").hide(vel);
-                $(".submit").show(vel);
-                $("#btn-editar-form").show();
-                $("#btn-crear").hide();
-                $("#num_e-form").hide();
-                $("#num_edit-form").show();*/
-            });
-            }
-        </script>-->
-        <style>
-            #page {
-    margin:0px auto;
-    width:100%;
-}
-
-#header{
-  position: fixed;
-  top:0;
-  width:100%;
-  height:auto;
-  background-color:#333;
-  color:#FFFFFF;
-}
- #content{
-  padding:30px;
-  width:800px;
- }
-        </style>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/style.css" rel="stylesheet">
     </head>
     <body>
         <div id="page">
@@ -67,10 +36,10 @@
         <br />
         <logic:notEmpty name="hermanos" scope="request">
         <center>
-            <table border=1 cellspacing=2 cellpadding=2 width="100%" bgcolor="#BDBDBD">
+            <table border=1 cellspacing=2 cellpadding=2 width="70%" bgcolor="#FFFFFF">
                 <tr>
+                    <td style="width:  82px;min-width: 82px;"><b>Opción</b></td>
                     <td><b>Nº</b></td>
-                    <td><b>Opción</b></td>
                     <td><b>DNI</b></td>
                     <td><b>Nombre</b></td>
                     <td><b>Apellido</b></td>
@@ -84,18 +53,19 @@
                 </tr>
                 <logic:iterate name="hermanos" id="h" indexId="cont">
                     <tr>
-                        <td><bean:write name="cont" /></td>
+                        
                         <td>
                             <!--<i class="fa fa-times"></i> |-->
                             <html:form action="seleccionHermano" method="post">
                                 <html:hidden property="dni" name="h"></html:hidden>
-                                <i class="fa fa-pencil-square-o"></i><html:submit styleClass="fa fa-pencil-square-o" value="&#xf043"></html:submit>
-                            </html:form> |
+                                <span class="box"><html:submit styleClass="fa fa-pencil-square-o btn btn-default" value="&#xf044"></html:submit></span>
+                            </html:form>
                             <html:form action="eliminarHermano" method="post">
                                 <html:hidden property="dni" name="h"></html:hidden>
-                               <i class="fa fa-trash-o"></i><html:submit styleClass="fa fa-pencil-square-o" value="&#xf043"></html:submit>
+                               <span class="box"> <html:submit styleClass="fa fa-trash-o btn btn-default" value="&#xf014"></html:submit></span>
                             </html:form>
                         </td>
+                        <td><bean:write name="cont" /></td>
                         <td><bean:write name="h" property="dni" /> </td>
                         <td><bean:write name="h" property="nombre" /> </td>
                         <td><bean:write name="h" property="apellido1" /> <bean:write name="h" property="apellido2" />  </td>
@@ -131,7 +101,7 @@
             Contraseña:<html:text property="clave"></html:text><br />
             Repetir Contraseña:<html:text property="reclave"></html:text><br />
             <html:hidden property="accion" styleId="accion" value="crear"></html:hidden>
-            <i class="fa fa-plus-circle"></i><html:submit>Enviar</html:submit>
+            <html:submit styleClass="fa fa-plus-square btn btn-default" value="&#xf0fe Crear"></html:submit>
             </fieldset>
     </html:form>
     </div>
