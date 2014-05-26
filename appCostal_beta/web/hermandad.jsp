@@ -37,7 +37,6 @@
         <center>
             <table border=1 cellspacing=2 cellpadding=2 width="70%" bgcolor="#FFFFFF">
                 <tr>
-                    
                     <td style="width:  82px;min-width: 82px;"><b>Opción</b></td>
                     <td><b>Nº</b></td>
                     <td><b>ID</b></td>

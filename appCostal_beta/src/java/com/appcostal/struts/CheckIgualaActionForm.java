@@ -6,7 +6,6 @@
 
 package com.appcostal.struts;
 
-import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionErrors;
@@ -22,7 +21,7 @@ public class CheckIgualaActionForm extends org.apache.struts.action.ActionForm {
     private String idiguala;
     private String idpaso;
     private String descripcion;
-    private Date fecha;
+    private String fecha;
     private String accion;
 
     public String getAccion() {
@@ -57,11 +56,11 @@ public class CheckIgualaActionForm extends org.apache.struts.action.ActionForm {
         this.descripcion = descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

@@ -10,26 +10,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/style.css" rel="stylesheet">
         <title>G-Paso</title>
-        <style>
-            #page {
-    margin:0px auto;
-    width:100%;
-}
-
-#header{
-  position: fixed;
-  top:0;
-  width:100%;
-  height:auto;
-  background-color:#333;
-  color:#FFFFFF;
-}
- #content{
-  padding:30px;
-  width:800px;
- }
-        </style>
+        
     </head>
     <body>
         <div id="page">
@@ -57,7 +43,7 @@
                 Tipo:<html:text property="tipo" value="<%=paso.getTipo()%>"></html:text><br />
                 
                 <html:hidden property="accion" styleId="accion" value="editar"></html:hidden>
-                <i class="fa fa-plus-circle"></i><html:submit>Guardar</html:submit>
+                <html:submit styleClass="fa fa-floppy-o btn btn-default" value="&#xf0c7 Guardar"></html:submit>
                 </fieldset>
         </html:form>
         </div>

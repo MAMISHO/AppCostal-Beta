@@ -9,26 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/style.css" rel="stylesheet">
         <title>JSP Page</title>
-        <style>
-            #page {
-    margin:0px auto;
-    width:100%;
-}
-
-#header{
-  position: fixed;
-  top:0;
-  width:100%;
-  height:auto;
-  background-color:#333;
-  color:#FFFFFF;
-}
- #content{
-  padding:30px;
-  width:800px;
- }
-        </style>
     </head>
     <body>
        <div id="page">
@@ -46,7 +31,7 @@
         <html:form action="checkLogin" method="post">
             Nombre: <html:text property="email" ></html:text><br />
             clave: <html:password property="clave"></html:password><br />
-            <html:submit>Envíar</html:submit>
+            <html:submit styleClass="fa fa-caret-square-o-right btn btn-default" value="&#xf152 Entrar"></html:submit>
         </html:form>
        </div>
     </body>

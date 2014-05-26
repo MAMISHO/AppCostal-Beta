@@ -83,13 +83,13 @@
          <action path="/iguala" type="com.appcostal.struts.IgualaAction">
             <forward name="success" path="/iguala.jsp"/>
         </action>
-        <action input="/iguala" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.SeleccionIgualaAction">
+        <action input="/iguala.do" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.CheckIgualaAction">
             <forward name="success" path="/iguala.do"/>
         </action>
         <action input="/iguala" name="EliminarIgualaActionForm" path="/eliminarIguala" scope="request" type="com.appcostal.struts.EliminarIgualaAction">
              <forward name="success" path="/iguala.do"/>
         </action>
-        <action input="/iguala" name="SeleccionPasoActionForm" path="/seleccionIguala" scope="request" type="com.appcostal.struts.SeleccionIgualaAction">
+        <action input="/iguala" name="SeleccionIgualaActionForm" path="/seleccionIguala" scope="request" type="com.appcostal.struts.SeleccionIgualaAction">
             <forward name="success" path="/editarIguala.jsp"/>
         </action>
             
@@ -106,6 +106,7 @@
         <action input="/recorrido" name="SeleccionRecorridoActionForm" path="/seleccionRecorrido" scope="request" type="com.appcostal.struts.SeleccionRecorridoAction">
             <forward name="success" path="/editarRecorrido.jsp"/>
         </action>
+        <!--<action input="/seleccionIguala" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.CheckIgualaAction"/>-->
          <!--<action path="/recorridoAction" type="com.appcostal.struts.RecorridoAction"/>
         <action input="/checkRecorrido" name="CheckRecorridoActionForm" path="/checkRecorrido" scope="request" type="com.appcostal.struts.CheckRecorridoAction"/>
          <action input="/eliminarRecorrido" name="EliminarRecorridoActionForm" path="/eliminarRecorrido" scope="request" type="com.appcostal.struts.EliminarRecorridoAction"/>

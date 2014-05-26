@@ -8,27 +8,12 @@
 <html:html lang="true">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/style.css" rel="stylesheet">
         <title>App Costal</title>
         <html:base/>
-        <style>
-            #page {
-    margin:0px auto;
-    width:100%;
-}
-
-#header{
-  position: fixed;
-  top:0;
-  width:100%;
-  height:auto;
-  background-color:#333;
-  color:#FFFFFF;
-}
- #content{
-  padding:30px;
-  width:800px;
- }
-        </style>
     </head>
     <body style="background-color: white">
         
@@ -48,7 +33,7 @@
         --%>
         <div style="margin: 0 auto 0 auto; padding: 20px;background-color: #E0ECF8; width: 300px; border: 2px solid black; border-radius: 8px;">
             <form action="hermandad.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar hermandades" style="width: 150px;height: 150px;"/>
+                <input type="submit" name="enviar" value="Gestionar hermandades" style="width: 250px;height: 150px;"/>
             </form>
             <form action="paso.do" method="post">
                 <input type="submit" name="enviar" value="Gestionar pasos" />

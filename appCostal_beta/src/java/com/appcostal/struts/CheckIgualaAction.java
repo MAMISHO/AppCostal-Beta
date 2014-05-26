@@ -7,9 +7,9 @@
 package com.appcostal.struts;
 
 import appcostal.model.DAO;
-import appcostal.model.Hermandad;
 import appcostal.model.Iguala;
 import appcostal.model.Paso;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +19,7 @@ import org.apache.struts.action.ActionMapping;
 
 /**
  *
- * @author Jesus
+ * @author MAMISHO
  */
 public class CheckIgualaAction extends org.apache.struts.action.Action {
 
@@ -40,12 +40,16 @@ public class CheckIgualaAction extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        
         String idiguala=((CheckIgualaActionForm)form).getIdiguala();
         String idpaso=((CheckIgualaActionForm)form).getIdpaso();
         String descripcion=((CheckIgualaActionForm)form).getDescripcion();
-        Date fecha=((CheckIgualaActionForm)form).getFecha();
+        String f=((CheckIgualaActionForm)form).getFecha();
         String accion=((CheckIgualaActionForm)form).getAccion();
+        
+        //Date ahora = fechanacimiento;
+        SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+        //return (Date)formateador.format(ahora);
+        Date fecha=formateador.parse(f);
         
         DAO dao=new DAO();
         //Hermandad hermandad=dao.obtenerHermandad(idhermandad);

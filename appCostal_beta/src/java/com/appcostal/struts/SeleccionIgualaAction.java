@@ -41,8 +41,13 @@ public class SeleccionIgualaAction extends org.apache.struts.action.Action {
         
            DAO dao=new DAO();
         String idiguala=((SeleccionIgualaActionForm)form).getIdiguala();
+        //Paso paso=((SeleccionIgualaActionForm)form).
         Iguala iguala=dao.obtenerIguala(idiguala);
         
+        //Paso p=dao.obtenerPaso(iguala.getPaso().getIdpaso().toString());
+        //Integer i=p.getIdpaso();
+        //String nombre=p.getNombre();
+        //iguala.setPaso(p);
         request.setAttribute("iguala", iguala);
         return mapping.findForward(SUCCESS);
     }
