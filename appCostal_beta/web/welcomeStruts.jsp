@@ -59,6 +59,9 @@
             <form action="iguala.do" method="post">
                 <input type="submit" name="enviar" value="Gestionar Igualas" />
             </form>
+            <form action="recorrido.do" method="post">
+                <input type="submit" name="enviar" value="Gestionar recorrido" />
+            </form>
         </div>
 
     </body>

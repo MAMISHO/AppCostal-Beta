@@ -133,6 +133,35 @@ public class DAO {
         return iguala;
     }
       
+       
+        public List<Recorrido> recorridosDisponibles(){
+        List<Recorrido> recorridos;
+        SessionFactory s=HibernateUtil.getSessionFactory();
+        Session se;
+        se=s.openSession();
+        Transaction tx=se.beginTransaction();
+        Query q=se.createQuery("From Recorrido");
+        recorridos=(List<Recorrido>)q.list();
+        tx.commit();
+        se.close();
+        return recorridos;
+    }
+      
+       public Recorrido obtenerRecorrido(String idrecorrido){
+        Recorrido recorrido=null;
+        SessionFactory s=HibernateUtil.getSessionFactory();
+        Session se;
+        se=s.openSession();
+        Transaction tx=se.beginTransaction();
+        Query q=se.createQuery("From Recorrido where idrecorrido='"+idrecorrido+"'");
+        List<Recorrido> lista=(List<Recorrido>)q.list();
+        if(!lista.isEmpty()){
+            recorrido=lista.get(0);
+        }
+        tx.commit();
+        se.close();
+        return recorrido;
+    }
       
     
     public Hermandad obtenerHermandad(String idhermandad){

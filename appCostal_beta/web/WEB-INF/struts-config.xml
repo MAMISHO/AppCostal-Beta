@@ -7,6 +7,10 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="EliminarRecorridoActionForm" type="com.appcostal.struts.EliminarRecorridoActionForm"/>
+        <form-bean name="SeleccionRecorridoActionForm" type="com.appcostal.struts.SeleccionRecorridoActionForm"/>
+        <form-bean name="CheckRecorridoActionForm" type="com.appcostal.struts.CheckRecorridoActionForm"/>
+        
         <form-bean name="CheckIgualaActionForm" type="com.appcostal.struts.CheckIgualaActionForm"/>
         <form-bean name="EliminarIgualaActionForm" type="com.appcostal.struts.EliminarIgualaActionForm"/>
         <form-bean name="SeleccionIgualaActionForm" type="com.appcostal.struts.SeleccionIgualaActionForm"/>
@@ -89,7 +93,26 @@
             <forward name="success" path="/editarIguala.jsp"/>
         </action>
             
-        <!--<action input="/iguala" name="CheckIgualaActionForm" path="/eliminarIguala" scope="request" type="com.appcostal.struts.EliminarIgualaAction">
+        <action path="/recorrido" type="com.appcostal.struts.RecorridoAction">
+            <forward name="success" path="/recorrido.jsp"/>
+        </action>
+        
+        <action input="/recorrido" name="CheckRecorridoActionForm" path="/checkRecorrido" scope="request" type="com.appcostal.struts.SeleccionRecorridoAction">
+            <forward name="success" path="/recorrido.do"/>
+        </action>
+        <action input="/recorrido" name="EliminarRecorridoActionForm" path="/eliminarRecorrido" scope="request" type="com.appcostal.struts.EliminarRecorridoAction">
+             <forward name="success" path="/recorrido.do"/>
+        </action>
+        <action input="/recorrido" name="SeleccionRecorridoActionForm" path="/seleccionRecorrido" scope="request" type="com.appcostal.struts.SeleccionRecorridoAction">
+            <forward name="success" path="/editarRecorrido.jsp"/>
+        </action>
+         <!--<action path="/recorridoAction" type="com.appcostal.struts.RecorridoAction"/>
+        <action input="/checkRecorrido" name="CheckRecorridoActionForm" path="/checkRecorrido" scope="request" type="com.appcostal.struts.CheckRecorridoAction"/>
+         <action input="/eliminarRecorrido" name="EliminarRecorridoActionForm" path="/eliminarRecorrido" scope="request" type="com.appcostal.struts.EliminarRecorridoAction"/>
+        
+       <action input="/" name="SeleccionRecorridoActionForm" path="/seleccionRecorrido" scope="request" type="com.appcostal.struts.SeleccionRecorridoAction"/>    
+            
+       <action input="/iguala" name="CheckIgualaActionForm" path="/eliminarIguala" scope="request" type="com.appcostal.struts.EliminarIgualaAction">
              <forward name="success" path="/iguala.do"/>
        <action input="/iguala" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.CheckIgualaAction">
             <forward name="success" path="/iguala.do"/>-->

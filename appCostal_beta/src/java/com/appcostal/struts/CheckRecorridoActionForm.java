@@ -18,37 +18,39 @@ import org.apache.struts.action.ActionMessage;
  */
 public class CheckRecorridoActionForm extends org.apache.struts.action.ActionForm {
     
-    private String name;
+    private String idrecorrido;
     
-    private int number;
+    private String descripcion;
 
+    private String accion;
+
+    public String getAccion() {
+        return accion;
+    }
+
+    public void setAccion(String accion) {
+        this.accion = accion;
+    }
     /**
      * @return
      */
-    public String getName() {
-        return name;
+    public String getIdrecorrido() {
+        return idrecorrido;
     }
 
-    /**
-     * @param string
-     */
-    public void setName(String string) {
-        name = string;
+    public void setIdrecorrido(String idrecorrido) {
+        this.idrecorrido = idrecorrido;
     }
 
-    /**
-     * @return
-     */
-    public int getNumber() {
-        return number;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    /**
-     * @param i
-     */
-    public void setNumber(int i) {
-        number = i;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
+
+   
 
     /**
      *
@@ -67,10 +69,10 @@ public class CheckRecorridoActionForm extends org.apache.struts.action.ActionFor
      */
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
-        if (getName() == null || getName().length() < 1) {
+        /*if (getName() == null || getName().length() < 1) {
             errors.add("name", new ActionMessage("error.name.required"));
             // TODO: add 'error.name.required' key to your resources
-        }
+        }*/
         return errors;
     }
 }

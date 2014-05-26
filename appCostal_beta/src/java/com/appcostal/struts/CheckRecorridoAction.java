@@ -6,6 +6,10 @@
 
 package com.appcostal.struts;
 
+import appcostal.model.DAO;
+import appcostal.model.Hermandad;
+import appcostal.model.Paso;
+import appcostal.model.Recorrido;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -36,6 +40,22 @@ public class CheckRecorridoAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         
+       String idrecorrido=((CheckRecorridoActionForm)form).getIdrecorrido();
+        
+        String descripcion=((CheckRecorridoActionForm)form).getDescripcion();
+        
+        String accion=((CheckRecorridoActionForm)form).getAccion();
+        
+        DAO dao=new DAO();
+        //Hermandad hermandad=dao.obtenerHermandad(idhermandad);
+        Recorrido recorrido=new Recorrido(descripcion);
+        if(accion.equals("crear")){
+            dao.Insertar(recorrido);
+        }else{
+
+            recorrido.setIdrecorrido(Integer.parseInt(idrecorrido));
+            dao.actualizar(recorrido);
+        }
         return mapping.findForward(SUCCESS);
     }
 }
