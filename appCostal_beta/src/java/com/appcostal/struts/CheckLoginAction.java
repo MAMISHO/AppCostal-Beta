@@ -50,8 +50,10 @@ public class CheckLoginAction extends org.apache.struts.action.Action {
         String email = ((CheckLoginActionForm) form).getEmail();
         String clave = ((CheckLoginActionForm) form).getClave();
 
+
         DAO dao = new DAO();
         Hermano hermano = dao.buscaHermano(email, clave);
+        
         if (hermano != null) {
             if (email.equals(hermano.getEmail())) {
                 return mapping.findForward(SUCCESS);

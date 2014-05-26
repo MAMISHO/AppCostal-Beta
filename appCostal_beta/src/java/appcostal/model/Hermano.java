@@ -22,7 +22,16 @@ public class Hermano  implements java.io.Serializable {
      private String telefonomovil;
      private Date fechanacimiento;
      private String clave;
+     private String tipo;
      private String email;
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     public Hermano() {
     }

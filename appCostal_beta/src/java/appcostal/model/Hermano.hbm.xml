@@ -38,6 +38,9 @@
         <property name="clave" type="string">
             <column name="clave" length="30" not-null="true" />
         </property>
+        <property name="tipo" type="string">
+            <column name="tipo" length="30" not-null="true" />
+        </property>
         <property name="email" type="string">
             <column name="email" length="60" not-null="true" />
         </property>
