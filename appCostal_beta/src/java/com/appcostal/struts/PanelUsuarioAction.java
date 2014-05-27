@@ -6,6 +6,7 @@
 
 package com.appcostal.struts;
 
+import appcostal.model.Hermano;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -35,7 +36,7 @@ public class PanelUsuarioAction extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        
+        Hermano h=(Hermano)request.getSession().getAttribute("usuario");
         return mapping.findForward(SUCCESS);
     }
 }

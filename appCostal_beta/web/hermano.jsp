@@ -83,23 +83,29 @@
             </table>
         </center>    
     </logic:notEmpty>
-
-    <div style="margin: 0 auto 0 auto; padding: 20px;background-color: #E0ECF8; width: 300px; border: 2px solid black; border-radius: 8px;">
+    <br />
+    <div style="margin: 0 auto 0 auto; padding: 20px;background-color: #E0ECF8; width: 600px; border: 2px solid black; border-radius: 8px;">
     <html:errors></html:errors>
     <html:form action="checkHermano" style="margin-top:2%;">
         <fieldset> <legend align="left">Datos</legend>
-            DNI:<html:text property="dni"></html:text><br />
+            DNI:<html:text property="dni"></html:text>
             Nombre:<html:text property="nombre"></html:text><br />
-            Primer apellido:<html:text property="apellido1"></html:text><br />
+            <br />
+            Primer apellido:<html:text property="apellido1"></html:text>
             Segundo apellido:<html:text property="apellido2"></html:text><br />
-            Dirección:<html:text property="direccion"></html:text><br />
+            <br />
+            Dirección:<html:text property="direccion"></html:text>
             Localidad:<html:text property="localidad"></html:text><br />
+            <br />
             Provincia:<html:text property="provincia"></html:text><br />
-            Tlf fijo:<html:text property="telefonofijo"></html:text><br />
+            <br />
+            Tlf fijo:<html:text property="telefonofijo"></html:text>
             Tlf móvil:<html:text property="telefonomovil"></html:text><br />
-            Fecha de nacimiento:<html:text property="fechanacimiento"></html:text><br />
+            <br />
+            Fecha de nacimiento:<html:text property="fechanacimiento"></html:text>
             E-mail:<html:text property="email"></html:text><br />
-            Contraseña:<html:text property="clave"></html:text><br />
+            <br />
+            Contraseña:<html:text property="clave"></html:text>
             Repetir Contraseña:<html:text property="reclave"></html:text><br />
             <html:hidden property="accion" styleId="accion" value="crear"></html:hidden>
             <html:submit styleClass="fa fa-plus-square btn btn-default" value="&#xf0fe Crear"></html:submit>
