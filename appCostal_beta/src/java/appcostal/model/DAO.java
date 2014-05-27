@@ -207,4 +207,17 @@ public class DAO {
         se.close();
         return hermandades;
     }
+    
+    public List<RelHermanoPasoId> pasosDeHermano(String dni){
+        List<RelHermanoPasoId> pasos;
+        SessionFactory s=HibernateUtil.getSessionFactory();
+        Session se;
+        se=s.openSession();
+        Transaction tx=se.beginTransaction();
+        Query q=se.createQuery("From RelHermanoPaso where dni='"+dni+"'");
+        pasos=(List<RelHermanoPasoId>)q.list();
+        tx.commit();
+        se.close();
+        return pasos;
+    }
 }

@@ -6,9 +6,6 @@
 
 package com.appcostal.struts;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionErrors;
@@ -19,49 +16,21 @@ import org.apache.struts.action.ActionMessage;
  *
  * @author MAMISHO
  */
-public class CheckHermanoActionForm extends org.apache.struts.validator.ValidatorForm {
+public class AddPasoActionForm extends org.apache.struts.action.ActionForm {
     
     private String dni;
-     private String nombre;
-     private String apellido1;
-     private String apellido2;
-     private String direccion;
-     private String localidad;
-     private String provincia;
-     private String telefonofijo;
-     private String telefonomovil;
-     private String fechanacimiento;
-     private String clave;
+    /*private String nombre;
+    private String apellido1;
+    private String apellido2;
+    private String dirección;
+    private String localidad;
+    private String provincia;
+    private String telefonofijo;
+    private String telefonomovil;
+    private String fechanacimiento;
+    private String email;*/
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-     private String reclave;
-     private String email;
-     private String accion;
-     private String tipo;
-
-    public String getAccion() {
-        return accion;
-    }
-
-    public void setAccion(String accion) {
-        this.accion = accion;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getNombre() {
+   /* public String getNombre() {
         return nombre;
     }
 
@@ -85,12 +54,12 @@ public class CheckHermanoActionForm extends org.apache.struts.validator.Validato
         this.apellido2 = apellido2;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDirección() {
+        return dirección;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDirección(String dirección) {
+        this.dirección = dirección;
     }
 
     public String getLocalidad() {
@@ -126,35 +95,11 @@ public class CheckHermanoActionForm extends org.apache.struts.validator.Validato
     }
 
     public String getFechanacimiento() {
-        //Date ahora = fechanacimiento;
         return fechanacimiento;
     }
 
     public void setFechanacimiento(String fechanacimiento) {
-        /*
-        //Date ahora = fechanacimiento;
-        SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
-        //return (Date)formateador.format(ahora);
-        Date ahora=formateador.parse(fechanacimiento);
-        this.fechanacimiento = formateador.parse(fechanacimiento);
-        */
         this.fechanacimiento = fechanacimiento;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-
-    public String getReclave() {
-        return reclave;
-    }
-
-    public void setReclave(String reclave) {
-        this.reclave = reclave;
     }
 
     public String getEmail() {
@@ -164,12 +109,26 @@ public class CheckHermanoActionForm extends org.apache.struts.validator.Validato
     public void setEmail(String email) {
         this.email = email;
     }
-     
-     
+    */
+
+
+
     /**
-     *
+     * @return
      */
-    public CheckHermanoActionForm() {
+    public String getDni() {
+        return dni;
+    }
+
+    /**
+     * @param string
+     */
+    public void setDni(String string) {
+        dni = string;
+    }
+
+
+    public AddPasoActionForm() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -181,12 +140,12 @@ public class CheckHermanoActionForm extends org.apache.struts.validator.Validato
      * @param request The HTTP Request we are processing.
      * @return
      */
-    /*public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
-        if (getName() == null || getName().length() < 1) {
+        /*if (getDni() == null || getDni().length() < 1) {
             errors.add("name", new ActionMessage("error.name.required"));
-            // TODO: add 'error.name.required' key to your resources
-        }
+            // TODO: add 'error.dni.required' key to your resources
+        }*/
         return errors;
-    }*/
+    }
 }

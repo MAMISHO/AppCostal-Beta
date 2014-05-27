@@ -53,6 +53,7 @@ public class CheckHermanoAction extends org.apache.struts.action.Action {
         String fechanac=((CheckHermanoActionForm) form).getFechanacimiento();
         String clave=((CheckHermanoActionForm) form).getClave();
         String email=((CheckHermanoActionForm) form).getEmail();
+        String tipo=((CheckHermanoActionForm)form).getTipo();
         String accion=((CheckHermanoActionForm)form).getAccion();
         
         //Date ahora = fechanacimiento;
@@ -62,7 +63,7 @@ public class CheckHermanoAction extends org.apache.struts.action.Action {
         
         
 
-        Hermano her=new Hermano(dni, nombre, apellido1,  apellido2,  direccion,  localidad,  provincia,  telefonofijo,  telefonomovil,  fechanacimiento,  clave,  email);
+        Hermano her=new Hermano(dni, nombre, apellido1,  apellido2,  direccion,  localidad,  provincia,  telefonofijo,  telefonomovil,  fechanacimiento,  clave, tipo, email);
         DAO dao=new DAO();
         if(accion.equals("crear")){
             dao.Insertar(her);

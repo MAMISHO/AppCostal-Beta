@@ -51,12 +51,13 @@
                     <td><b>Móvil</b></td>
                     <td><b>Nacimiento</b></td>
                     <td><b>E-mail</b></td>
+                    <td>Pasos</td>
                 </tr>
                 <logic:iterate name="hermanos" id="h" indexId="cont">
                     <tr>
                         
                         <td>
-                            <!--<i class="fa fa-times"></i> |-->
+                            
                             <html:form action="seleccionHermano" method="post">
                                 <html:hidden property="dni" name="h"></html:hidden>
                                 <span class="box"><html:submit styleClass="fa fa-pencil-square-o btn btn-default" value="&#xf044"></html:submit></span>
@@ -66,7 +67,9 @@
                                <span class="box"> <html:submit styleClass="fa fa-trash-o btn btn-default" value="&#xf014"></html:submit></span>
                             </html:form>
                         </td>
+                        
                         <td><bean:write name="cont" /></td>
+                        <html:form action="addPaso">
                         <td><bean:write name="h" property="dni" /> </td>
                         <td><bean:write name="h" property="nombre" /> </td>
                         <td><bean:write name="h" property="apellido1" /> <bean:write name="h" property="apellido2" />  </td>
@@ -77,7 +80,9 @@
                         <td><bean:write name="h" property="telefonomovil" /> </td>
                         <td><bean:write name="h" property="fechanacimiento" format="dd-MM-yyyy"/> </td>
                         <td><bean:write name="h" property="email" /> </td>
-
+                        <html:hidden property="dni" name="h" />
+                        <td><html:submit styleClass="fa fa-plus-square btn btn-default" value="&#xf0fe Pasos"></html:submit></td>
+                        </html:form>
                     </tr>
                 </logic:iterate>
             </table>
@@ -107,6 +112,10 @@
             <br />
             Contraseña:<html:text property="clave"></html:text>
             Repetir Contraseña:<html:text property="reclave"></html:text><br />
+            Tipo<html:select property="tipo">
+                <html:option value="costalero">Costalero</html:option>
+                <html:option value="capataz">Capataz</html:option>
+            </html:select>
             <html:hidden property="accion" styleId="accion" value="crear"></html:hidden>
             <html:submit styleClass="fa fa-plus-square btn btn-default" value="&#xf0fe Crear"></html:submit>
             </fieldset>
