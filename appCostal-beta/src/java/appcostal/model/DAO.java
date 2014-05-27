@@ -50,7 +50,11 @@ public class DAO {
         Session se;
         se=s.openSession();
         Transaction tx=se.beginTransaction();
+        try{
         se.save(obj);
+        }catch(Exception e){
+            System.out.println("error");
+        }
         tx.commit();
         se.close();
     }

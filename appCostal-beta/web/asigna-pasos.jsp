@@ -37,13 +37,11 @@
                 Nombre: <label><bean:write name="hermano" property="nombre" /></label><br />
                 Apellido :<label><bean:write name="hermano" property="apellido1" /></label><br />
             </div>
-            <html:form>
+                <html:form action="agregarPaso">
                 <html:select property="idpaso">
-                    <logic:iterate collection="listaPasos" id="p" >
-                        <html:option value='<bean:write name="p" property="nombre"></bean:write>'><bean:write name="p" property="nombre"></bean:write></html:option>
-                    </logic:iterate>
-                    
+                    <html:options property="idpaso"  collection="listaPasos" labelProperty="nombre"/>
                 </html:select>
+                    <html:hidden property="dni" name="hermano" />
                 <input type="submit" name="Agregar" value="Agregar Paso">
             </html:form>
         </div>

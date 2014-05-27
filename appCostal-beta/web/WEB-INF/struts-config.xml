@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="AgregarPasoActionForm" type="com.appcostal.struts.AgregarPasoActionForm"/>
         <form-bean name="AddPasoActionForm" type="com.appcostal.struts.AddPasoActionForm"/>
         <form-bean name="EliminarRecorridoActionForm" type="com.appcostal.struts.EliminarRecorridoActionForm"/>
         <form-bean name="SeleccionRecorridoActionForm" type="com.appcostal.struts.SeleccionRecorridoActionForm"/>
@@ -113,6 +114,9 @@
         </action>
         <action input="/hermano" name="AddPasoActionForm" path="/addPaso" scope="request" type="com.appcostal.struts.AddPasoAction">
             <forward name="success" path="/asigna-pasos.jsp"/>
+        </action>
+        <action input="/addPaso" name="AgregarPasoActionForm" path="/agregarPaso" scope="request" type="com.appcostal.struts.AgregarPasoAction">
+            <forward name="success" path="/addPaso.do"/>
         </action>
         <!--<action input="/" name="AddPasoActionForm" path="/addPaso" scope="request" type="com.appcostal.struts.AddPasoAction"/>-->
         <!--<action input="/seleccionIguala" name="CheckIgualaActionForm" path="/checkIguala" scope="request" type="com.appcostal.struts.CheckIgualaAction"/>-->
