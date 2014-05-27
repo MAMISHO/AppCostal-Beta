@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 27-05-2014 a las 08:30:45
+-- Tiempo de generación: 27-05-2014 a las 23:46:13
 -- Versión del servidor: 5.6.14
 -- Versión de PHP: 5.5.6
 
@@ -291,8 +291,17 @@ CREATE TABLE IF NOT EXISTS `rel_hermano_paso` (
   `escapataz` tinyint(1) NOT NULL,
   `escostalero` tinyint(1) NOT NULL,
   PRIMARY KEY (`dni`,`idpaso`),
-  KEY `FK_rel_hermano_paso_2` (`idpaso`)
+  KEY `FK_rel_hermano_paso_2` (`idpaso`,`dni`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `rel_hermano_paso`
+--
+
+INSERT INTO `rel_hermano_paso` (`dni`, `idpaso`, `escapataz`, `escostalero`) VALUES
+('11111111A', 1, 0, 1),
+('11111111A', 2, 0, 1),
+('11111111B', 1, 1, 0);
 
 -- --------------------------------------------------------
 

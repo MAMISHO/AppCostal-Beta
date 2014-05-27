@@ -10,6 +10,8 @@ import appcostal.model.DAO;
 import appcostal.model.Hermano;
 import appcostal.model.RelHermanoPaso;
 import appcostal.model.RelHermanoPasoId;
+import java.util.HashSet;
+import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -61,6 +63,10 @@ public class AgregarPasoAction extends org.apache.struts.action.Action {
         //guardar en DAO
         try{
             //dao.Insertar(rhp);
+            Set<RelHermanoPasoId> s=new HashSet<RelHermanoPasoId>();
+            s.add(rhp);
+            //hp.setId((RelHermanoPasoId) s);
+            
             dao.Insertar(hp);
         }catch(Exception e){ 
             System.out.println("error");

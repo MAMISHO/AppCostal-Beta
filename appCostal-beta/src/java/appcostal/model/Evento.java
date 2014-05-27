@@ -1,5 +1,5 @@
 package appcostal.model;
-// Generated 27-may-2014 13:22:48 by Hibernate Tools 3.6.0
+// Generated 27-may-2014 23:28:15 by Hibernate Tools 3.6.0
 
 
 import java.util.Date;
