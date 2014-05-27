@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/CheckIgualaActionForm.java</file>
-            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/CheckIgualaAction.java</file>
-            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/web/editarIguala.jsp</file>
-            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/SeleccionIgualaAction.java</file>
-            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/web/WEB-INF/struts-config.xml</file>
+            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/web/panel-usuario.jsp</file>
+            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/CheckLoginActionForm.java</file>
+            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/PanelUsuarioAction.java</file>
+            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/src/java/com/appcostal/struts/CheckLoginAction.java</file>
+            <file>file:/Users/MAMISHO/NetBeansProjects/IT/AppCostal-Beta/appCostal_beta/web/hermano.jsp</file>
         </group>
     </open-files>
 </project-private>
