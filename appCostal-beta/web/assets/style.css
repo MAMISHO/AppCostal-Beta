@@ -47,3 +47,11 @@ span {
     text-shadow: 1px 1px #333;
     text-transform: capitalize;
 }
+.contenedor-usuario{
+    margin: 4% 4% 1% 4%; border: 2px solid gray;
+}
+.caja-usuario{
+    border: 2px solid black; width: 300px; height: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px #333;
+}

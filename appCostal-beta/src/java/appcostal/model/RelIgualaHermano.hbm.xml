@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-may-2014 23:53:05 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="appcostal.model.RelIgualaHermano" table="rel_iguala_hermano" catalog="appcostal">
+        <composite-id name="id" class="appcostal.model.RelIgualaHermanoId">
+            <key-property name="idiguala" type="int">
+                <column name="idiguala" />
+            </key-property>
+            <key-property name="dni" type="string">
+                <column name="dni" length="9" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="iguala" class="appcostal.model.Iguala" update="false" insert="false" fetch="select">
+            <column name="idiguala" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hermano" class="appcostal.model.Hermano" update="false" insert="false" fetch="select">
+            <column name="dni" length="9" not-null="true" />
+        </many-to-one>
+        <property name="altura" type="float">
+            <column name="altura" precision="12" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

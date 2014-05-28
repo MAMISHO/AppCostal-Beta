@@ -16,6 +16,7 @@ import org.hibernate.Transaction;
  * @author MAMISHO
  */
 public class DAO {
+    
     public List<Hermano> hermanosDisponibles(){
         List<Hermano> hermanos;
         SessionFactory s=HibernateUtil.getSessionFactory();
@@ -212,14 +213,14 @@ public class DAO {
         return hermandades;
     }
     
-    public List<RelHermanoPasoId> pasosDeHermano(String dni){
-        List<RelHermanoPasoId> pasos;
+    public List<RelHermanoPaso> pasosDeHermano(String dni){
+        List<RelHermanoPaso> pasos;
         SessionFactory s=HibernateUtil.getSessionFactory();
         Session se;
         se=s.openSession();
         Transaction tx=se.beginTransaction();
         Query q=se.createQuery("From RelHermanoPaso where dni='"+dni+"'");
-        pasos=(List<RelHermanoPasoId>)q.list();
+        pasos=(List<RelHermanoPaso>)q.list();
         tx.commit();
         se.close();
         return pasos;

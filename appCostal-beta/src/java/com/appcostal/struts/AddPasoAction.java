@@ -8,6 +8,7 @@ package com.appcostal.struts;
 import appcostal.model.DAO;
 import appcostal.model.Hermano;
 import appcostal.model.Paso;
+import appcostal.model.RelHermanoPaso;
 import appcostal.model.RelHermanoPasoId;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -50,11 +51,11 @@ public class AddPasoAction extends org.apache.struts.action.Action {
             dni=(String) request.getAttribute("dni");
         }
         DAO dao=new DAO();
-        List<RelHermanoPasoId> pasos_hermano=dao.pasosDeHermano(dni);
+        List<RelHermanoPaso> pasos_hermano=dao.pasosDeHermano(dni);
         List<Paso> pasos=new ArrayList();
-        Iterator<RelHermanoPasoId> it=pasos_hermano.iterator();
+        Iterator<RelHermanoPaso> it=pasos_hermano.iterator();
         while(it.hasNext()){
-            Integer idPaso=it.next().getIdpaso();
+            Integer idPaso=it.next().getId().getIdpaso();
             Paso paso=dao.obtenerPaso(idPaso.toString());
             if(paso!=null){
                 pasos.add(paso);

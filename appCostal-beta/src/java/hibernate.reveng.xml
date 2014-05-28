@@ -2,20 +2,20 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="appcostal"/>
-  <table-filter match-name="procesion"/>
-  <table-filter match-name="hermandad"/>
+  <table-filter match-name="iguala"/>
+  <table-filter match-name="evento"/>
+  <table-filter match-name="rel_marcha_procesion"/>
+  <table-filter match-name="trabajadera"/>
+  <table-filter match-name="paso"/>
+  <table-filter match-name="rel_evento_hermano"/>
   <table-filter match-name="recorrido"/>
   <table-filter match-name="relevo"/>
-  <table-filter match-name="rel_iguala_hermano"/>
+  <table-filter match-name="hermandad"/>
   <table-filter match-name="posicion"/>
-  <table-filter match-name="marcha"/>
-  <table-filter match-name="evento"/>
-  <table-filter match-name="iguala"/>
-  <table-filter match-name="paso"/>
-  <table-filter match-name="trabajadera"/>
-  <table-filter match-name="rel_marcha_procesion"/>
+  <table-filter match-name="rel_hermano_paso"/>
+  <table-filter match-name="procesion"/>
   <table-filter match-name="hermano"/>
   <table-filter match-name="rel_relevo_trabajadera_hermano"/>
-  <table-filter match-name="rel_hermano_paso"/>
-  <table-filter match-name="rel_evento_hermano"/>
+  <table-filter match-name="marcha"/>
+  <table-filter match-name="rel_iguala_hermano"/>
 </hibernate-reverse-engineering>

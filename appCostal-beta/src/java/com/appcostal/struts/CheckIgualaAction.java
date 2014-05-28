@@ -11,6 +11,8 @@ import appcostal.model.Iguala;
 import appcostal.model.Paso;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -54,7 +56,9 @@ public class CheckIgualaAction extends org.apache.struts.action.Action {
         DAO dao=new DAO();
         //Hermandad hermandad=dao.obtenerHermandad(idhermandad);
         Paso paso=dao.obtenerPaso(idpaso);
-        Iguala iguala=new Iguala(paso,descripcion,fecha);
+        Set s=new HashSet();
+        s.add(paso);
+        Iguala iguala=new Iguala(paso,descripcion,fecha,s);
         if(accion.equals("crear")){
             dao.Insertar(iguala);
         }else{

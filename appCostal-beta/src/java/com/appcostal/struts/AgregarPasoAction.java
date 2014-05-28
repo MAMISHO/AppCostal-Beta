@@ -8,8 +8,11 @@ package com.appcostal.struts;
 
 import appcostal.model.DAO;
 import appcostal.model.Hermano;
+import appcostal.model.Paso;
 import appcostal.model.RelHermanoPaso;
 import appcostal.model.RelHermanoPasoId;
+import appcostal.model.RelInsertObject;
+import appcostal.model.RelInsertObjectImpl;
 import java.util.HashSet;
 import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
@@ -57,20 +60,22 @@ public class AgregarPasoAction extends org.apache.struts.action.Action {
         }
         
         RelHermanoPasoId rhp=new RelHermanoPasoId(dni, Integer.parseInt(idpaso));
-        RelHermanoPaso hp=new RelHermanoPaso(rhp,capataz,costalero);
+        Paso p=dao.obtenerPaso(idpaso);
+        RelHermanoPaso hp=new RelHermanoPaso(rhp,p,h,capataz,costalero);
         hp.setId(rhp);
         
         //guardar en DAO
-        try{
+        //try{
             //dao.Insertar(rhp);
-            Set<RelHermanoPasoId> s=new HashSet<RelHermanoPasoId>();
-            s.add(rhp);
+            //Set<RelHermanoPasoId> s=new HashSet<RelHermanoPasoId>();
+            //s.add(rhp);
             //hp.setId((RelHermanoPasoId) s);
-            
-            dao.Insertar(hp);
-        }catch(Exception e){ 
-            System.out.println("error");
-        };
+            RelInsertObject rel =new RelInsertObjectImpl();
+            rel.create(hp);
+            //dao.Insertar(hp);
+        //}catch(Exception e){ 
+          //  System.out.println("error");
+        //};
         
         
         request.setAttribute("dni", dni);

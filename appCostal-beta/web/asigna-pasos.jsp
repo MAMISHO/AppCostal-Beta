@@ -28,8 +28,8 @@
             String absoluteDiskPath = getServletContext().getRealPath(relativeWebPath);
         %>
 
-        <div style="margin-top: 4%; border: 2px solid gray;">
-            <div style="border: 2px solid blue; width: 300px; height: 100px;">
+        <div class="contenedor-usuario">
+            <div class="caja-usuario">
                 <%--<img src="<%=absoluteDiskPath%>"/>--%>
                 <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThuHwXXUEYHISUeFf7IrLDYJEd7CISMYwvVcVrlZv_T42DyTNVJDt4xw" style="float: left;"/>
 
@@ -37,17 +37,39 @@
                 Nombre: <label><bean:write name="hermano" property="nombre" /></label><br />
                 Apellido :<label><bean:write name="hermano" property="apellido1" /></label><br />
             </div>
-                <html:form action="agregarPaso">
+            <html:form action="agregarPaso">
                 <html:select property="idpaso">
                     <html:options property="idpaso"  collection="listaPasos" labelProperty="nombre"/>
                 </html:select>
-                    <html:hidden property="dni" name="hermano" />
+                <html:hidden property="dni" name="hermano" />
                 <input type="submit" name="Agregar" value="Agregar Paso">
             </html:form>
         </div>
-        <br />
-        <br />
-        <br />
+
+
+         <logic:notEmpty name="pasosHermano" scope="request">
+                <center>
+                    <h1>Mis pasos</h1>
+                    <table border=1 cellspacing=2 cellpadding=2 width="60%" bgcolor="#FFFFFF">
+                        <tr>
+                            <td><b>Nº</b></td>
+                            <td><b>ID</b></td>
+                            <td><b>Hermandad</b></td>
+                            <td><b>Nombre</b></td>
+                            <td><b>Tipo</b></td>
+                        </tr>
+                        <logic:iterate name="pasosHermano" id="p" indexId="cont">
+                            <tr>
+                                <td><bean:write name="cont" /></td>
+                                <td><bean:write name="p" property="idpaso" /> </td>
+                                <td><bean:write name="p" property="hermandad.idhermandad" /> </td>
+                                <td><bean:write name="p" property="nombre" /> </td>
+                                <td><bean:write name="p" property="tipo" /> </td>
+                            </tr>
+                        </logic:iterate>
+                    </table>
+                </center>    
+            </logic:notEmpty>
 
     </body>
 </html>
