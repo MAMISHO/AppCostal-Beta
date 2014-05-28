@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27-may-2014 23:53:05 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="appcostal.model.Marcha" table="marcha" catalog="appcostal">
+        <id name="idmarcha" type="java.lang.Integer">
+            <column name="idmarcha" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" not-null="true" />
+        </property>
+        <property name="duracion" type="int">
+            <column name="duracion" not-null="true" />
+        </property>
+        <set name="relMarchaProcesions" table="rel_marcha_procesion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idmarcha" not-null="true" />
+            </key>
+            <one-to-many class="appcostal.model.RelMarchaProcesion" />
+        </set>
+    </class>
+</hibernate-mapping>
