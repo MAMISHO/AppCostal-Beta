@@ -34,19 +34,24 @@
         --%>
         <div style="margin: 0 auto 0 auto; padding: 20px;background-color: #E0ECF8; width: 300px; border: 2px solid black; border-radius: 8px;">
             <form action="hermandad.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar hermandades" style="width: 250px;height: 150px;"/>
+                Hermandades<br/>
+                <input type="image" name="enviar" value="Gestionar hermandades" style="width: 150px;height: 150px;" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThuHwXXUEYHISUeFf7IrLDYJEd7CISMYwvVcVrlZv_T42DyTNVJDt4xw">
             </form>
             <form action="paso.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar pasos" />
+                Pasos<br/>
+                <input type="image" name="enviar" value="Gestionar pasos"style="width: 150px;height: 150px;" src="http://1.bp.blogspot.com/_esUBlqKjDzk/TErlt_7Fu3I/AAAAAAAASKU/IgvoUOXbwUk/s1600/primer+paso.jpg"/>
             </form>
             <form action="hermano.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar hermano" />
+                Hermanos<br/>
+                <input type="image" name="enviar" value="Gestionar hermano" style="width: 150px;height: 150px;" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcThuHwXXUEYHISUeFf7IrLDYJEd7CISMYwvVcVrlZv_T42DyTNVJDt4xw"/>
             </form>
             <form action="iguala.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar Igualas" />
+                Igualas<br/>
+                <input type="image" name="enviar" value="Gestionar Igualas" style="width: 150px;height: 150px;" src="http://1.bp.blogspot.com/_edVcsQrgQS4/TTtbDGIzxbI/AAAAAAAAGIc/rL-ACXcplVs/s1600/IGUALA%2BFAVORES%2B%25282%2529.jpg"/>
             </form>
             <form action="recorrido.do" method="post">
-                <input type="submit" name="enviar" value="Gestionar recorrido" />
+                Recorridos<br/>
+                <input type="image" name="enviar" value="Gestionar recorrido" style="width: 150px;height: 150px;" src="http://www.conricyt.mx/rsrcs/imgs/conricyt_mapa.jpg"/>
             </form>
         </div>
 
